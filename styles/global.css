@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* html,
+body,
+#__next {
+  height: 100%;
+} */
+
+@layer base {
+  :root {
+    --background: 0, 0, 0;
+    --foreground: 0, 100, 50;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+  }
+}
