@@ -1,20 +1,19 @@
-import { Metadata } from 'next';
+import { Metadata } from 'next'
 
-
-
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-
-
-
-
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion'
 
 const faqs = [
   {
     question: 'Do we need to book a table?',
-    answer: 'We would thoroughly recommend it, its a guaranteed avenue to instant happiness! We operate a waiting list at busy periods so you can join the queue and be notified when a table is available. We always try to accommodate everyone in a timely fashion. If you would like to book a table, just follow the link above.'
+    answer:
+      'We would thoroughly recommend it, its a guaranteed avenue to instant happiness! We operate a waiting list at busy periods so you can join the queue and be notified when a table is available. We always try to accommodate everyone in a timely fashion. If you would like to book a table, just follow the link above.',
   },
 ]
-
 
 export const metadata: Metadata = {
   title: 'Frequently asked Questions',

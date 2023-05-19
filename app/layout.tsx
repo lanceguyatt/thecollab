@@ -1,10 +1,9 @@
 import '@/styles/globals.css'
-
 import { Metadata } from 'next'
 import { Inter as FontSans } from 'next/font/google'
 import localFont from 'next/font/local'
-
 import { Footer, Header } from '@/components'
+
 import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
 
@@ -28,10 +27,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: [
-    'Beer',
-    'Burgers',
-  ],
+  keywords: ['Beer', 'Burgers'],
   authors: [
     {
       name: 'lanceguyatt',
@@ -72,12 +68,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head />
       <body
         className={cn(
-          'min-h-screen bg-background font-sans antialiased',
+          'flex flex-col min-h-screen bg-background font-sans antialiased',
           fontSans.variable
         )}
       >
         <Header />
-        {children}
+        <main className="flex-auto">{children}</main>
         <Footer />
       </body>
     </html>
