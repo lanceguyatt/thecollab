@@ -42,7 +42,7 @@ export default async function BeerPage({
 
             <div className="prose">
               <p>{beer.description}</p>
-              <pre>{JSON.stringify(beer.images[0], null, 2)}</pre>
+              <pre>{JSON.stringify(beer, null, 2)}</pre>
             </div>
           </div>
         </article>
