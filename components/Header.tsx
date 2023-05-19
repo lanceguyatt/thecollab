@@ -6,12 +6,12 @@ const nav = [
     url: '/menu',
   },
   {
-    name: 'Club',
-    url: '/club',
-  },
-  {
     name: 'Book',
     url: '/book',
+  },
+  {
+    name: 'Club',
+    url: '/club',
   },
 ]
 

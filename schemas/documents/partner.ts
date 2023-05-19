@@ -1,10 +1,8 @@
-// import { UserIcon } from '@sanity/icons'
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
-  name: 'burger',
-  title: 'Burger',
-  // icon: UserIcon,
+  name: 'partner',
+  title: 'Partner',
   type: 'document',
   fields: [
     defineField({
@@ -27,26 +25,27 @@ export default defineType({
     defineField({
       name: 'description',
       title: 'Description',
-      type: 'string',
-      // validation: (rule) => rule.required(),
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+      ]
     }),
     defineField({
       name: 'image',
       title: 'Image',
       type: 'image',
-      // validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'price',
-      title: 'Price £',
-      type: 'number',
-      // validation: (rule) => rule.required(),
+      name: 'logo',
+      title: 'Logo',
+      type: 'image',
     }),
     defineField({
-      name: 'allergens',
-      title: 'Allergens',
-      type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'allergen' }] }],
-    })
-  ],
+      name: 'url',
+      title: 'Url',
+      type: 'url',
+    }),
+  ]
 })
