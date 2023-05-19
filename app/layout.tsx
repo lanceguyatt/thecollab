@@ -1,9 +1,11 @@
 import '@/styles/globals.css'
+
 import { Metadata } from 'next'
 import { Inter as FontSans } from 'next/font/google'
 import localFont from 'next/font/local'
-import { Footer, Header } from '@/components'
 
+import Footer from '@/components/footer'
+import Header from '@/components/header'
 import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
 

@@ -65,12 +65,17 @@ export default function BookPage() {
               </div>
               <div className="space-y-3">
                 <Label htmlFor="mobile">Mobile</Label>
-                <Input type="phone" placeholder="Mobile" name="mobile" id="mobile" />
+                <Input
+                  type="phone"
+                  placeholder="Mobile"
+                  name="mobile"
+                  id="mobile"
+                />
               </div>
             </div>
 
             <Label className="block mb-6">
-              <Checkbox /> You'll receive email updates for The Collab
+              <Checkbox /> You&apos;ll receive email updates for The Collab
               automatically, tick this box to also receive SMS updates. *
             </Label>
 
