@@ -4,7 +4,6 @@ export default function MenuPage() {
   return (
     <main className="flex-auto">
       <article>
-        <h1>Menu</h1>
         <section className="py-6">
           <div className="container">
             <h2>
