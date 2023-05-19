@@ -1,7 +1,12 @@
+import { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 import { getAllBeers } from '@/sanity/lib/client'
+
+const metadata: Metadata = {
+  title: 'Beers'
+}
 
 export default async function BeerPage() {
   const beers = await getAllBeers()

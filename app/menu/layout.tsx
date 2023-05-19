@@ -22,13 +22,13 @@ export default function MenuLayout({ children }: IMenuLayout) {
         <h1 className="text-4xl font-bold">Menu</h1>
         {children}
         <Accordion type="single" collapsible>
-  <AccordionItem value="item-1">
-    <AccordionTrigger>Is it accessible?</AccordionTrigger>
-    <AccordionContent>
-      Yes. It adheres to the WAI-ARIA design pattern.
-    </AccordionContent>
-  </AccordionItem>
-</Accordion>
+          <AccordionItem value="item-1">
+            <AccordionTrigger>Do we need to book a table?</AccordionTrigger>
+            <AccordionContent>
+              <p>We would thoroughly recommend it, its a guaranteed avenue to instant happiness!   We operate a waiting list at busy periods so you can join the queue and be notified when a table is available. We always try to accommodate everyone in a timely fashion. If you would like to book a table, just follow the link above.</p>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </div>
     </section>
   )

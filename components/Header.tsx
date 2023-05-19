@@ -5,14 +5,6 @@ const nav = [
     name: 'Menu',
     url: '/menu',
   },
-  {
-    name: 'Book',
-    url: '/book',
-  },
-  {
-    name: 'Club',
-    url: '/club',
-  },
 ]
 
 export default function Header() {

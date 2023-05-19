@@ -1,5 +1,7 @@
+const { withContentlayer } = require('next-contentlayer')
+
 /** @type {import('next').NextConfig} */
-const config = {
+const nextConfig = {
   experimental: {
     appDir: true,
   },
@@ -8,4 +10,5 @@ const config = {
   },
 }
 
-export default config
+module.exports = withContentlayer(nextConfig)
+

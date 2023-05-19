@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "next build",
+    "build": "contentlayer build && next build",
     "dev": "next",
     "format": "npx prettier --write . --ignore-path .gitignore",
     "lint": "next lint -- --ignore-path .gitignore",
@@ -19,8 +19,11 @@
     "@tailwindcss/typography": "^0.5.9",
     "class-variance-authority": "^0.6.0",
     "clsx": "^1.2.1",
+    "contentlayer": "^0.3.2",
+    "date-fns": "^2.30.0",
     "lucide-react": "^0.219.0",
     "next": "^13.4.2",
+    "next-contentlayer": "^0.3.2",
     "next-sanity": "^4.3.2",
     "next-sanity-image": "^6.0.0",
     "react": "^18.2.0",
