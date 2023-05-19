@@ -1,5 +1,12 @@
 import { Metadata } from 'next';
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+
 interface IMenuLayout {
   children: React.ReactNode
 }
@@ -14,6 +21,14 @@ export default function MenuLayout({ children }: IMenuLayout) {
       <div className="container">
         <h1 className="text-4xl font-bold">Menu</h1>
         {children}
+        <Accordion type="single" collapsible>
+  <AccordionItem value="item-1">
+    <AccordionTrigger>Is it accessible?</AccordionTrigger>
+    <AccordionContent>
+      Yes. It adheres to the WAI-ARIA design pattern.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
       </div>
     </section>
   )
