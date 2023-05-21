@@ -30,7 +30,7 @@ export default defineType({
         {
           type: 'block',
         },
-      ]
+      ],
     }),
     defineField({
       name: 'image',
@@ -47,5 +47,5 @@ export default defineType({
       title: 'Url',
       type: 'url',
     }),
-  ]
+  ],
 })

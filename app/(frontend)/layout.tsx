@@ -15,7 +15,7 @@ const fontSans = FontSans({
 })
 
 const fontHeading = localFont({
-  src: '../assets/fonts/CalSans-SemiBold.woff2',
+  src: '../../assets/fonts/CalSans-SemiBold.woff2',
   variable: '--font-heading',
 })
 
@@ -70,7 +70,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head />
       <body
         className={cn(
-          'flex flex-col min-h-screen bg-background font-sans antialiased',
+          'flex min-h-screen flex-col bg-background font-sans antialiased',
           fontSans.variable
         )}
       >

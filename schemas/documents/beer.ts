@@ -7,11 +7,12 @@ export default defineType({
   groups: [
     {
       name: 'seo',
-      title: 'Seo'
-    }, {
+      title: 'Seo',
+    },
+    {
       name: 'brewsheet',
-      title: 'Brewsheet'
-    }
+      title: 'Brewsheet',
+    },
   ],
   fields: [
     defineField({
@@ -88,6 +89,12 @@ export default defineType({
       type: 'string',
       group: 'brewsheet',
       // validation: (rule) => rule.required(),
+    }),
+    defineField({
+      type: 'boolean',
+      name: 'veganFriendly',
+      title: 'VeganFriendly',
+      initialValue: false,
     }),
   ],
 })

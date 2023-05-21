@@ -1,5 +1,5 @@
-import { Box, Text } from '@sanity/ui'
 import { ComponentProps, Suspense } from 'react'
+import { Box, Text } from '@sanity/ui'
 import { isRecord, isString, useClient } from 'sanity'
 import { UserViewComponent } from 'sanity/desk'
 import styled from 'styled-components'

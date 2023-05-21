@@ -47,6 +47,16 @@ export default defineType({
       title: 'Allergens',
       type: 'array',
       of: [{ type: 'reference', to: [{ type: 'allergen' }] }],
-    })
+    }),
+    defineField({
+      name: 'vegan',
+      title: 'Vegan',
+      type: 'boolean',
+    }),
+    defineField({
+      name: 'vegetarian',
+      title: 'Vegarian',
+      type: 'boolean',
+    }),
   ],
 })

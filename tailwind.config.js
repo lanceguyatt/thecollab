@@ -75,6 +75,10 @@ module.exports = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
+      gridTemplateColumns: {
+        'auto-fill-200': 'repeat(auto-fill, minmax(12.5rem, 1fr))',
+        'auto-fit-200': 'repeat(auto-fit, minmax(12.5rem, 1fr))',
+      },
     },
   },
   plugins: [require('@tailwindcss/typography'), require('tailwindcss-animate')],

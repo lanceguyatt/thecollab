@@ -1,5 +1,24 @@
 import { groq } from 'next-sanity'
 
+const menuItemFields = groq`
+  _id,
+  name,
+  description,
+  "slug": slug.current,
+`
+
+export const getAllBeersQuery = groq`
+*[_type == "beer"] {
+  ${menuItemFields}
+}
+`
+
+export const getAllBurgersQuery = groq`
+*[_type == "burger"] {
+  ${menuItemFields}
+}
+`
+
 export const beerBySlugQuery = groq`
 *[_type == "beer" && slug.current == $slug][0] {
   _id,
@@ -8,7 +27,8 @@ export const beerBySlugQuery = groq`
   "slug": slug.current,
   images,
   ibu,
-  abv
+  abv,
+  veganFriendly,
 }
 `
 
@@ -18,35 +38,5 @@ export const burgerBySlugQuery = groq`
   name,
   description,
   "slug": slug.current,
-  images,
 }
 `
-
-export const getAllBeersQuery = groq`
-*[_type == "beer"] {
-  _id,
-  name,
-  description,
-  "slug": slug.current,
-  images,
-  ibu,
-  abv,
-  hops,
-}
-`
-
-export interface Beer {
-  _id: string
-  name: string
-  description: string
-  slug: string
-  hops?: string
-  abv?: string
-  ibu?: string
-  images?: {}
-}
-
-export interface Burger {
-  name: string
-  description?: string
-}

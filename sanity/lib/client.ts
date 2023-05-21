@@ -1,13 +1,13 @@
-import { createClient} from 'next-sanity'
+import { type Beer, type Burger } from '@/types'
+import { createClient } from 'next-sanity'
 
 // import { cache } from 'react'
 import { apiVersion, dataset, projectId, useCdn } from '../env'
 import {
-  type Beer,
-  type Burger,
   beerBySlugQuery,
   burgerBySlugQuery,
   getAllBeersQuery,
+  getAllBurgersQuery,
 } from './queries'
 
 export const client = createClient({
@@ -43,6 +43,13 @@ export async function getBeerBySlug(slug: string): Promise<Beer> {
 export async function getAllBeers(): Promise<Beer[]> {
   if (client) {
     return (await client.fetch(getAllBeersQuery)) || []
+  }
+  return []
+}
+
+export async function getAllBurgers(): Promise<Burger[]> {
+  if (client) {
+    return (await client.fetch(getAllBurgersQuery)) || []
   }
   return []
 }

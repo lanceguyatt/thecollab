@@ -32,8 +32,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default async function BeerPage({ params }: Props) {
-  const beer = await getBeerBySlug(params.slug)
+export default async function BeerPage({ params }: Props): Promise<any> {
+  const { slug } = params
+  const beer = await getBeerBySlug(slug[0])
+
+  console.log(params)
 
   if (!beer) {
     notFound()
@@ -41,13 +44,21 @@ export default async function BeerPage({ params }: Props) {
 
   return (
     <>
-      <nav className="container">
+      <nav>
         <Link href="/menu/beers">Back</Link>
       </nav>
+
       <article>
         <h1>
-          {beer.name} <Badge className="bg-[red]">YUM!</Badge>
+          {beer.name}{' '}
+          {beer.veganFriendly && (
+            <Badge className="bg-[green]">Vegan friendly</Badge>
+          )}
         </h1>
+        <dl>
+          <dt>IBU</dt>
+          <dd>{beer.ibu}</dd>
+        </dl>
         <div className="prose">
           <p>{beer.description}</p>
           <pre>{JSON.stringify(beer, null, 2)}</pre>

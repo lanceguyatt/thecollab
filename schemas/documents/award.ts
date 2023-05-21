@@ -14,7 +14,7 @@ export default defineType({
     defineField({
       name: 'image',
       title: 'Image',
-      type: 'image'
+      type: 'image',
     }),
     defineField({
       name: 'year',
@@ -22,7 +22,7 @@ export default defineType({
       type: 'datetime',
       options: {
         dateFormat: 'YYYY',
-      }
-    })
-  ]
+      },
+    }),
+  ],
 })
