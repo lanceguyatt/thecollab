@@ -1,6 +1,6 @@
 import Link from 'next/link'
+import type { MenuItem as MI } from '@/types'
 
-import MenuItem from '@/components/menu-item'
 import {
   Card,
   CardContent,
@@ -8,7 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import type { MenuItem as MI } from '@/types'
+import MenuItem from '@/components/menu-item'
 
 import { buttonVariants } from './ui/button'
 

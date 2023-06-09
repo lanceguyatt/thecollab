@@ -1,4 +1,7 @@
+'use client'
+
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 const nav = [
   {
@@ -16,7 +19,7 @@ const nav = [
 ]
 
 export default function Nav() {
-  // const router = useRouter()
+  const router = useRouter()
   // const currentRoute = router.pathname
 
   return (

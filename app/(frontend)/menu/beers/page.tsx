@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import { getAllBeers } from '@/sanity/lib/client'
 
 import MenuItems from '@/components/menu-items'
-import { getAllBeers } from '@/sanity/lib/client'
 
 const metadata: Metadata = {
   title: 'Beers',

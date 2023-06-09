@@ -4,10 +4,10 @@ import { Metadata } from 'next'
 import { Inter as FontSans } from 'next/font/google'
 import localFont from 'next/font/local'
 
-import Footer from '@/components/footer'
-import Header from '@/components/header'
 import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
+import Footer from '@/components/footer'
+import Header from '@/components/header'
 
 const fontSans = FontSans({
   subsets: ['latin'],

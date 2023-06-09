@@ -1,4 +1,5 @@
 import { siteConfig } from '@/config/site'
+import Video from '@/components/video'
 
 const metadata = {
   title: siteConfig.name,
@@ -8,9 +9,7 @@ const metadata = {
 export default function Home() {
   return (
     <article>
-      <div className="container">
-        <h1 className="text-center">{siteConfig.name}</h1>
-      </div>
+      <Video videoId="UG6Nk25YVnA" />
     </article>
   )
 }

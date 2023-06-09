@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useDeferredValue } from 'react'
+import React, { lazy, Suspense, useDeferredValue } from 'react'
 import { Skeleton, Stack } from '@sanity/ui'
 import { type ObjectInputProps } from 'sanity'
 import styled from 'styled-components'

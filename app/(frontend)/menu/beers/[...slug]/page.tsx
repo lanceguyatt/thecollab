@@ -3,9 +3,9 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { getBeerBySlug } from '@/sanity/lib/client'
 
 import { Badge } from '@/components/ui/badge'
-import { getBeerBySlug } from '@/sanity/lib/client'
 
 interface Props {
   params: { slug: string }

@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import { getAllBurgers } from '@/sanity/lib/client'
 
 import MenuItems from '@/components/menu-items'
-import { getAllBurgers } from '@/sanity/lib/client'
 
 const metadata: Metadata = {
   title: 'Burgers',
@@ -15,5 +15,7 @@ export default async function BurgersPage() {
     notFound()
   }
 
-  return burgers && <MenuItems name="Burgers" url="/menu/burgers" items={burgers} />
+  return (
+    burgers && <MenuItems name="Burgers" url="/menu/burgers" items={burgers} />
+  )
 }

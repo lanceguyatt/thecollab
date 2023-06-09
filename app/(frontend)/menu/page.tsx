@@ -1,9 +1,10 @@
+import { getAllBeers, getAllBurgers } from '@/sanity/lib/client'
+
+// import Pre from '@/components/pre'
+import { AuthRequiredError } from '@/lib/exceptions'
 import MenuItem from '@/components/menu-item'
 import MenuItems from '@/components/menu-items'
 import Pre from '@/components/pre'
-// import Pre from '@/components/pre'
-import { AuthRequiredError } from '@/lib/exceptions'
-import { getAllBeers, getAllBurgers } from '@/sanity/lib/client'
 
 export default async function MenuPage() {
   const beers = await getAllBeers()
